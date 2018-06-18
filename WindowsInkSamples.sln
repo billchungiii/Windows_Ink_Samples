@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandWritingSample001", "Win
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInkControlLibrary", "WPF\WpfInkControlLibrary\WpfInkControlLibrary.csproj", "{82074A33-B3C6-438E-9C52-E82387A2462A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostWpfInkControlSample001", "HostWpfInkControlSample001\HostWpfInkControlSample001.csproj", "{D9BBD533-56CD-400A-B8B7-E60F860C72A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostWpfInkControlSample001", "WPF\HostWpfInkControlSample001\HostWpfInkControlSample001.csproj", "{D9BBD533-56CD-400A-B8B7-E60F860C72A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
