@@ -1,0 +1,35 @@
+﻿<Window x:Class="HandWritingSample001.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HandWritingSample001"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowState="Maximized" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <Button Content="Recognize" Margin="12,6,12,6" Width="120" Height="32" Click="RecognizeButton_Clicked"/>
+            <Button Content="Clear" Margin="12,6,12,6" Width="120" Height="32" Click="ClearButton_Clicked"/>
+        </StackPanel>
+        <ListView Grid.Row="1"  ItemsSource="{Binding}" Background="Green" Height="40" >
+            <ListView.ItemsPanel >
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate >
+                <DataTemplate >
+                    <Button  Height="32" Click="Item_Clicked" Padding="4" Background="Black">
+                        <TextBlock Text="{Binding}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <InkCanvas Grid.Row="2" x:Name="inkCanvas" Background="White" />
+    </Grid>
+</Window>
