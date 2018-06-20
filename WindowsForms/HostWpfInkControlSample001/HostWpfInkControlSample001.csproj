@@ -84,7 +84,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WpfInkControlLibrary\WpfInkControlLibrary.csproj">
+    <ProjectReference Include="..\..\WPF\WpfInkControlLibrary\WpfInkControlLibrary.csproj">
       <Project>{82074a33-b3c6-438e-9c52-e82387a2462a}</Project>
       <Name>WpfInkControlLibrary</Name>
     </ProjectReference>
