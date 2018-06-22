@@ -62,7 +62,7 @@ namespace InkSaveAndLoadSample001
             using (var stream = await file.OpenAsync(FileAccessMode.ReadWrite))
             {
                 await inkCanvas.InkPresenter.StrokeContainer.SaveAsync(stream);
-                //await inkCanvas.InkPresenter.StrokeContainer.SaveAsync(stream, InkPersistenceFormat.GifWithEmbeddedIsf);
+               // await inkCanvas.InkPresenter.StrokeContainer.SaveAsync(stream, InkPersistenceFormat.GifWithEmbeddedIsf);
             }
         }
 

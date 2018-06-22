@@ -20,17 +20,16 @@ using Windows.UI.Xaml.Navigation;
 
 // 空白頁項目範本已記錄在 https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x404
 
-namespace InkSaveToPngSample
+namespace InkSaveToPngSample002
 {
     /// <summary>
-    /// 可以在本身使用或巡覽至框架內的空白頁面。
+    /// render InkCanvas 無法存下螢光筆，這時要用另一個 grid 包住 InCanvas，render 該 grid
     /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
-
         }
 
         async private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -46,9 +45,9 @@ namespace InkSaveToPngSample
             picker.FileTypeChoices.Add("PNG", new List<string> { ".png" });
             var file = await picker.PickSaveFileAsync();
             if (file == null) return;
-            
+
             var bitmap = new RenderTargetBitmap();
-            await bitmap.RenderAsync(inkCanvas);
+            await bitmap.RenderAsync(outCanvas);
             var width = (uint)bitmap.PixelWidth;
             var height = (uint)bitmap.PixelHeight;
             var pixes = await bitmap.GetPixelsAsync();

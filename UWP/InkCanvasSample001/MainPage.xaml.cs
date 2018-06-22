@@ -61,7 +61,6 @@ namespace InkCanvasSample001
                 PenTip = PenTipShape.Rectangle,
             };
             inkCanvas.InkPresenter.UpdateDefaultDrawingAttributes(attributes);
-            
         }
     }
 }
